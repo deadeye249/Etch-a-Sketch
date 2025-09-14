@@ -1,5 +1,4 @@
-html,body{
-    padding: 0;
+html, body{
     margin: 0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -9,24 +8,28 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 .top{
     flex: 1 0 10vh;
-    display:flex;
+    width: 100vw;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size:large;
+    font-size: large;
     box-sizing: border-box;
 }
 
 .container {
     flex: 1 0 90vh;
+    width: 100vw;
     display: flex;
     border: 5px;
     border-color: black;
     border-style: solid;
     box-sizing: border-box;
+    padding: 8vh 5vw 8vh 5vw;
 }
 
 button{
