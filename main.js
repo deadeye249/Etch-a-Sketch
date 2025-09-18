@@ -32,7 +32,9 @@ createDivs(16,16);
 
 let reset_object = document.querySelector("button");
 reset_object.addEventListener("click",()=>{
-    let input = prompt("Provide the grid size:");
+    let input = prompt("Provide the grid size (Max: 100)");
+    input = Math.min(100,input);
+    input = Math.max(5,input);
     destroyDivs();
     createDivs(input,input);         
     });
