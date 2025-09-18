@@ -13,6 +13,26 @@ function createDivs(rows,columns)
         }
         container_div.appendChild(new_row);
     }
+
+    let grid_objects = document.querySelectorAll(".grid-column");
+    grid_objects.forEach(obj=>{
+            obj.addEventListener("mouseenter",()=>{
+            obj.style.backgroundColor = "black";
+        })});
+
+}
+
+function destroyDivs()
+{
+    let container_div = document.querySelector(".container");
+    container_div.replaceChildren();
 }
 
 createDivs(16,16);
+
+let reset_object = document.querySelector("button");
+reset_object.addEventListener("click",()=>{
+    let input = prompt("Provide the grid size:");
+    destroyDivs();
+    createDivs(input,input);         
+    });
